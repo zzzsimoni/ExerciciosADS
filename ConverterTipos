@@ -45,3 +45,10 @@ public class ConverterTipos{
         //📌 Regra: Para converter String em double, usamos Double.parseDouble(). Se a String contiver letras ("3.14abc"), ocorrerá um erro.
     }
 }
+//int → double	double numeroDouble = numeroInt;	42.0
+//double → int	int valorInt = (int) valorDouble;	9 (perde a parte decimal)
+//char → int	int codigoAscii = (int) 'B';	66 (código ASCII)
+//int → String	String idadeTexto = Integer.toString(idade);	"25"
+//String → int	int altura = Integer.parseInt("180");	180
+//double → String	String precoTexto = Double.toString(99.99);	"99.99"
+//String → double	double pi = Double.parseDouble("3.1415");	3.1415
