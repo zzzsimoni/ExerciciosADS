@@ -1,0 +1,47 @@
+public class ConverterTipos{
+    public static void main(String[] args) {
+        int numeroInt = 42;
+        double numeroDouble = numeroInt;
+        System.out.println("Conversão Implícita (int -> double): " + numeroDouble);
+        
+        //📌 Regra: Conversões de tipos menores para maiores (como int → double) são feitas automaticamente pelo Java.
+
+        double valorDouble = 9.75;
+        int valorInt = (int) valorDouble;
+        System.out.println("Conversão Explícita (double -> int): " + valorInt);
+
+        //📌 Regra: Quando convertemos um tipo maior (double) para um menor (int), o Java trunca o valor, descartando os números após a vírgula.
+
+        char letra = 'B';
+        int codigoAscii = (int) letra;
+        System.out.println("Código ASCII de 'B': " + codigoAscii);
+
+        //📌 Regra: O tipo char armazena internamente números inteiros correspondentes aos caracteres na tabela ASCII.
+
+        int idade = 25;
+        String idadeTexto = Integer.toString(idade);
+        System.out.println("Idade como String: " + idadeTexto);
+
+        //📌 Regra: Para converter um número para texto, usamos Integer.toString() ou apenas concatenamos com uma string:
+        
+        String alturaTexto = "180";
+        int altura = Integer.parseInt(alturaTexto);
+        System.out.println("String convertida para int: " + alturaTexto);
+
+        //📌 Regra: Para converter String em número inteiro, usamos Integer.parseInt(). Se a String contiver caracteres inválidos (ex: "abc"), ocorrerá um erro.
+
+        double preco = 99.99;
+        String precoTexto = Double.toString(preco);
+        System.out.println("Double para String: " + precoTexto);
+
+        //📌 Regra: Para converter números decimais (double) para String, usamos Double.toString() ou concatenação:
+        // String precoTexto = preco + "";
+
+
+        String piTexto = "3.1415";
+        double pi = Double.parseDouble(piTexto);
+        System.out.println("String para Double: " + piTexto);
+
+        //📌 Regra: Para converter String em double, usamos Double.parseDouble(). Se a String contiver letras ("3.14abc"), ocorrerá um erro.
+    }
+}
