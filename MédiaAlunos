@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class MediaAlunos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Olá, irei te ajudar à calcular sua média final nesse semestre!");
+
+        double AC1, AC2, AF, finalmed;
+
+        System.out.println("Para começar, me diga a sua nota na AC1");
+            AC1 = sc.nextDouble();
+        System.out.println("Boa! Agora preciso da sua nota na AC2");
+            AC2 = sc.nextDouble();
+        System.out.println("Para finalizar, me diga a sua nota da AF");
+            AF = sc.nextDouble();
+        
+            sc.close();
+        
+            finalmed = (AC1 + AC2 + AF)/3;
+        
+            System.out.println("Sua média final é: " + finalmed);
+
+        if (finalmed >= 7 && finalmed <= 9) { 
+            System.out.println("Parabéns, você está na média!!!!!");
+        } else if (finalmed >= 9) {
+            System.out.println("Uau, você foi incrível! Sua média foi excelente!!!!!!!!!");
+        } else {
+            System.out.println("Infelizmente você não passou, mas não desanime, continue estudando e você consegue :)");
+        }
+
+    
+
+    
+    }
+}
