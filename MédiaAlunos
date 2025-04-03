@@ -25,7 +25,7 @@ public class MediaAlunos {
         } else if (finalmed >= 9) {
             System.out.println("Uau, você foi incrível! Sua média foi excelente!!!!!!!!!");
         } else {
-            System.out.println("Infelizmente você não passou, mas não desanime, continue estudando e você consegue :)");
+            System.out.println("Infelizmente você não passou, prepara o bolso :/");
         }
 
     
