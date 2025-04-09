@@ -5,8 +5,9 @@ public class MediaAlunos {
         
         System.out.println("Olá, irei te ajudar à calcular sua média final nesse semestre!");
 
-        double AC1, AC2, AF, finalmed;
+        double AC1, AC2, AF;
         double mediamin;
+
         System.out.println("\nPara começar, me diga a sua nota na AC1");
             AC1 = sc.nextDouble();
         System.out.println("\nBoa! Agora preciso da sua nota na AC2");
@@ -24,7 +25,7 @@ public class MediaAlunos {
             System.out.println("AC2: " + AC2);
             System.out.println("AF: " + AF);
 
-            finalmed = (AC1 + AC2 + AF)/3;
+            double finalmed = (int) (AC1 + AC2 + AF)/3;
         
             System.out.println("\nSua média final é: " + finalmed);
 
@@ -33,7 +34,7 @@ public class MediaAlunos {
         } else if (finalmed >= 9) {
             System.out.println("\nUau, você foi incrível! Sua média foi excelente!!!!!!!!!");
         } else {
-            System.out.println("\nInfelizmente você não passou, prepara o bolso :/");
+            System.out.println("\nInfelizmente você não passou, prepara para a AG :/");
         }
 
     
