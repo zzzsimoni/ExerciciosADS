@@ -1,44 +1,45 @@
 import java.util.Scanner;
 public class MediaAlunos {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
+    
+    System.out.println("Olá, irei te ajudar à calcular sua média final nesse semestre!");
+
+    double AC1, AC2, AF, AG;
+    double mediamin;
+
+    System.out.println("\nPara começar, me diga a sua nota na AC1");
+    AC1 = sc.nextDouble();
+    System.out.println("\nBoa! Agora preciso da sua nota na AC2");
+    AC2 = sc.nextDouble();
+    System.out.println("\nMe fala aí sua nota da AG");
+    AG = sc.nextDouble();
+    System.out.println("\nPara finalizar, me diga a sua nota da AF");
+    AF = sc.nextDouble();
         
-        System.out.println("Olá, irei te ajudar à calcular sua média final nesse semestre!");
+    System.out.println("\nPerfeito! Agora me diga qual é a média mínima para passar");
+    mediamin = sc.nextDouble();
 
-        double AC1, AC2, AF, AG;
-        double mediamin;
+    sc.close();
 
-        System.out.println("\nPara começar, me diga a sua nota na AC1");
-            AC1 = sc.nextDouble();
-        System.out.println("\nBoa! Agora preciso da sua nota na AC2");
-            AC2 = sc.nextDouble();
-        System.out.println("\nMe fala aí sua nota da AG");
-            AG = sc.nextDouble();
-        System.out.println("\nPara finalizar, me diga a sua nota da AF");
-            AF = sc.nextDouble();
+    System.out.println("\nAs notas que você me passou foram: ");
+    System.out.println("\nAC1: " + AC1);
+    System.out.println("AC2: " + AC2);
+    System.out.println("AG: " + AG);
+    System.out.println("AF: " + AF);
+
+    double finalmed = (AC1*0.15) + (AC2*0.30) + (AG*0.10) + (AF*0.45);
         
-            System.out.println("\nPerfeito! Agora me diga qual é a média mínima para passar");
-            mediamin = sc.nextDouble();
+    System.out.println("\nSua média final é: " + finalmed);
+    System.out.println("A sua nota mínima para passar é: " + mediamin);
 
-            sc.close();
-
-            System.out.println("\nAs notas que você me passou foram: ");
-            System.out.println("\nAC1: " + AC1);
-            System.out.println("AC2: " + AC2);
-            System.out.println("AG: " + AG);
-            System.out.println("AF: " + AF);
-
-            double finalmed = (AC1*0.15) + (AC2*0.30) + (AG*0.10) + (AF*0.45);
-        
-            System.out.println("\nSua média final é: " + finalmed);
-
-        if (finalmed >= mediamin && finalmed <= 9) { 
+    if (finalmed >= mediamin && finalmed <= 9) { 
             System.out.println("\nParabéns, você está na média!!!!!");
-        } else if (finalmed >= 9) {
+    } else if (finalmed >= 9) {
             System.out.println("\nUau, você foi incrível! Sua média foi excelente!!!!!!!!!");
-        } else {
+    } else {
             System.out.println("\nInfelizmente você não passou, prepara para a AG :/");
-        }
+    }
 
     
 
