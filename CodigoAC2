@@ -1,0 +1,67 @@
+
+import java.util.Scanner;
+
+public class AC2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Bem-vindo ao sistema de notas!");
+
+        double[] pesos = new double[4];
+        System.out.println("\nPara começarmos, insira os pesos das 4 avaliações:");
+    for (int i = 0; i<4; i++) {
+            System.out.print("\nPeso " + (i + 1) + ": ");
+            pesos[i] = sc.nextDouble();
+    }
+        System.out.println("\nAgora, insira o tamanho da turma:");
+        int tamanhoTurma = sc.nextInt();
+        sc.nextLine(); 
+
+        double notaMinima;
+    do {
+            System.out.print("\nDigite a nota mínima de aprovação (mínimo 3.0): ");
+            notaMinima = sc.nextDouble();
+        } while (notaMinima < 3.0);
+
+        String[] nomes = new String[tamanhoTurma];
+        double[] medias = new double[tamanhoTurma];
+        int alunosInseridos = 0;
+        int aprovados = 0;
+        int reprovados = 0;
+        int excelencia = 0;
+        int recuperacao = 0;
+
+        while (alunosInseridos < tamanhoTurma) {
+            sc.nextLine(); 
+            System.out.print("\nDigite o nome do aluno: ");
+            String nome = sc.nextLine();
+            double[] notas = new double[4];
+            System.out.println("\nDigite as 4 notas do aluno:");
+            for (int aluno = 0; aluno < 4; aluno++) {
+                System.out.print("\nNota " + (aluno + 1) + ": ");
+                notas[aluno] = sc.nextDouble();
+            }
+            double somaPesos = 0;
+            double somaNotas = 0;
+            for (int i = 0; i < 4; i++) {
+                somaNotas += notas[i] * pesos[i];
+                somaPesos += pesos[i];
+            }
+            double media = somaNotas / somaPesos;
+            nomes[alunosInseridos] = nome;
+            medias[alunosInseridos] = media;    
+            if (media >= notaMinima) {
+                aprovados++;
+                if (media >= 9.0) {
+                    excelencia++;
+                }
+            } else if (media <= notaMinima) {
+                recuperacao++;
+            } else {
+                reprovados++;
+            }
+        sc.close();
+        }
+
+    }
+
+}
